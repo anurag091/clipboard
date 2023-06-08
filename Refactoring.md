@@ -13,12 +13,13 @@ it was nicely written but removed couole of ambiguity and extra added cyclomatic
 
 Here is the exolanation on few changes I did int he function.
 
-1. Simplyfied the unnecessary if wrapped with event, it was adding extra cyclomatic complexity.
+1. Simplified the unnecessary if wrapped with event, it was adding extra cyclomatic complexity.
 
-2. changed else to else if block because it looked like event can be string as well
+2. Changed else to else if block because it looked like event can be string as well
 
 3. Removed if (candidate) check Since candidate is initially set to TRIVIAL_PARTITION_KEY and it was also adding some cyclomatic complexity. If we don't pass event it will just return TRIVIAL_PARTITION_KEY value.
 
-4. Initialized candidate with TRIVIAL_PARTITION_KEY, because the code was doing the same thing multiple chacks in else condition.
+4. Initialized candidate with TRIVIAL_PARTITION_KEY, because the code was doing the same thing after multiple checks in else condition.
+
 5. Also The typeof check is moved outside of the if (candidate) condition to ensure consistent behavior
 
