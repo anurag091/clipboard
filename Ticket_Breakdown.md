@@ -22,14 +22,21 @@ Very realistic problem, here is the possible breakdown for ticket, I am sure the
 Not estimating it cause I believe any estimation should not be done based on just one person knowledge or perception.
 
 1- Update Agent table(I assume there is)db schema and add a new column for the custom ID that Facilities can save.
+
 2- Agent model need to be updated. Re-write the adapter that it can accommodate new value as well.
+
 3- Facilities API Endpoint: 
 
    I- Create a new API endpoint that allows Facilities to save/update the custom ID for an Agent. 
+   
    II - This endpoint should receive the Facility ID, Agent ID, and the custom ID as parameters.
+   
 4- Add user interface where facilities can enter custom ID.
+
 (Handle scenarios for duolicate, format and can suggest available custome IDs)
+
 5- Update report generation adapter so it can take custome ID as well
+
 6- Ofcourse make sure unit and Integration test are in place.
 
 I can think of one more to support older reports on custom Id. We might have to run some script to fill data for past reports
